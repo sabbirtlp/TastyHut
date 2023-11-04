@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty HUT</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header class="header ">
+        <div class="header_container flex justify-between items-center w-9/12 m-auto py-7">
+            <div class="header_left">
+                <h2 class="font-bold text-3xl">Tasty <span class="text-[#FFC107]">HUT</span></h2>
+            </div>
+            <div class="header_right">
+                <button class="py-3 px-4 bg-[#FFC107] rounded-[8px] font-medium ">Sign Up</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero ">
+            <div
+                class="hero_container flex justify-center  items-center w-[480px] md:w-[700px] lg:w-[770px] m-auto h-[80vh] py-8 flex-col">
+                <h2 class="font-semibold text-3xl sm:text-5xl md:text-6xl text-center text-white z-10">
+                    Taste Our Delicious Best Foods
+                </h2>
+                <p class="font-medium text-white py-6 z-10 text-lg text-center">There are many variations of passages of
+                    Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.
+                </p>
+                <div class="search_form flex gap-0 w-[100%] mx-2 justify-center">
+                    <div class="search_input_box rounded flex justify-center items-center  px-3 w-[80%] z-10 bg-white">
+                        <i class='bx bx-search text-black'></i>
+                        <input id="search_input_field" type="text"
+                            class="py-3 px-4 text-[16px] font-medium z-10 w-[100%]" placeholder="Search any food" />
+                    </div>
+                    <button class="bg-[#FFC107] py-3 px-5 font-semibold text-md rounded z-10 ml-[-10px]"
+                        onclick="searchMeal()">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="meal py-[100px]">
+            <h2 class="meal_section_heading pb-4 text-3xl md:text-4xl lg:4xl font-bold text-center">
+                Your Favourite Food
+            </h2>
+
+            <div id="meals_container" class="meal_container w-full md:w-9/12 lg:w-9/12 m-auto">
+                <div id="meals_container_inner"
+                    class="meals_container_inner flex flex-col lg:grid md:flex lg:grid-cols-2 md:flex-col">
+
+                    <!-- Single Meal Box -->
+
+                    <!-- Single Content Box End -->
+
+
+                </div>
+
+
+                <button id="showMoreButton" class="py-3 px-4 bg-[#FFC107] rounded-[8px] m-auto block font-semibold my-3">View More</button>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <section class="footer py-5 md:pt-10">
+            <div class="footer_container w-full md:w-9/12 m-auto pb-5 md:pb-10">
+                <div class="footer_inner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div class="footer_widget bg-[#f7f7f7] p-4 rounded-[10px] m-1 md:m-5 sm-6">
+                        <h2 class="font-bold text-xl md:text-2xl py-2">Quick Links</h2>
+                        <ul>
+                            <li class="p-1"><a href="#">Home</a></li>
+                            <li class="p-1"><a href="#">About</a></li>
+                            <li class="p-1"><a href="#">Services</a></li>
+                            <li class="p-1"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_widget bg-[#f7f7f7] p-4 rounded-[10px] m-1 md:m-5 sm:m-6">
+                        <h2 class="font-bold text-xl md:text-2xl py-2">Quick Links</h2>
+                        <ul>
+                            <li class="p-1"><a href="#">Home</a></li>
+                            <li class="p-1"><a href="#">About</a></li>
+                            <li class="p-1"><a href="#">Services</a></li>
+                            <li class="p-1"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div
+                        class="footer_widget lg:col-span-1 md:col-span-2 bg-[#f7f7f7] p-4 rounded-[10px] m-1 md:m-5 sm:m-6">
+                        <h2 class="font-bold text-xl md:text-2xl py-2">Quick Links</h2>
+                        <ul>
+                            <li class="p-1"><a href="#">Home</a></li>
+                            <li class="p-1"><a href="#">About</a></li>
+                            <li class="p-1"><a href="#">Services</a></li>
+                            <li class="p-1"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div
+                        class="footer_widget lg:col-span-2 md:col-span-2  bg-[#f7f7f7] p-4 rounded-[10px] m-1 md:m-5 sm:m-6">
+                        <h2 class="font-bold text-xl md:text-2xl py-2">Newsletter</h2>
+                        <div class="newsletter_box flex flex-col md:flex-row gap-3">
+                            <input type="text" class="text-black font-semibold py-2 px-3 w-full md:w-[60%]"
+                                placeholder="Your Email">
+                            <button class="py-3 px-5 bg-[#FFC107] rounded-[8px]">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom bg-[#000000] py-5">
+                <h4 class="font-semibold text-center text-white">&copy;2023 TastyHut</h4>
+            </div>
+        </section>
+
+
+
+
+
+        <div class=" fixed inset-0 flex items-center justify-center z-50 hidden" id="modal">
+
+        </div>
+
+
+
+
+
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
