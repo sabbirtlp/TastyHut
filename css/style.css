@@ -3,7 +3,7 @@ body{
     font-family: 'Exo', sans-serif;
 }
 .hero{
-    background:url(/images/banner_1.png); 
+    background:url(../images/banner_1.png); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
